@@ -1,11 +1,27 @@
-function takeANumber(line, customer) {
-    line.push(customer);
-    return `Welcome, ${customer}. You are number ${line.length} in line.`;
+// function takeANumber(line, customer) {
+//     line.push(customer);
+//     return `Welcome, ${customer}. You are number ${line.length} in line.`;
+// }
+let counter = 0;
+
+function takeANumber(line) {
+  counter++;
+  line.push(counter);
+  return `You are number ${counter}.`;
 }
+
+
+// function nowServing(line) {
+//   if(!line.length) {
+//     return `There is nobody waiting to be served!`;
+//   }
+  
+//   return `Currently serving ${ line.shift()}.`;
+// }
 
 function nowServing(line) {
   if(!line.length) {
-    return `There is nobody waiting to be served!`;
+    return `The line is empty`;
   }
   
   return `Currently serving ${line.shift()}.`;
